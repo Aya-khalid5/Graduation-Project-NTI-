@@ -337,10 +337,10 @@ elif page == "🔮 Prediction":
                 step=1.0, format="%.2f",
             )
             with st.container():
-            st.markdown("""
-                <style>
-                div[data-testid="stSlider"], div[data-testid="stSlider"] * {
-                    direction: ltr !important;
+                st.markdown("""
+                      <style>
+                      div[data-testid="stSlider"], div[data-testid="stSlider"] * {
+                            direction: ltr !important;
                 }
                 </style>
             """, unsafe_allow_html=True)

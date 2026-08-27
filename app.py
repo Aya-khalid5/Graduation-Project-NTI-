@@ -49,6 +49,7 @@ st.markdown(
         border-radius: 18px;
         color: white;
         margin-bottom: 1.5rem;
+        
     }
     .app-hero h1 { margin-bottom: 0.3rem; font-size: 2.1rem; }
     .app-hero p { font-size: 1.05rem; opacity: 0.92; margin: 0.15rem 0; }
@@ -60,8 +61,12 @@ st.markdown(
         box-shadow: 0 2px 10px rgba(0,0,0,0.06);
         border: 1px solid #eef1f4;
         margin-bottom: 1.1rem;
+        color: #1a1a1a !important;
     }
-    .card h3 { margin-top: 0; }
+    .card h3 {
+        margin-top: 0;
+        color: #1a1a1a !important;
+    }
 
     .result-box {
         background: linear-gradient(135deg, #2d6a4f, #40916c);

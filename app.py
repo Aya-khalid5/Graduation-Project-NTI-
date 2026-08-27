@@ -337,13 +337,15 @@ elif page == "🔮 Prediction":
                 step=1.0, format="%.2f",
             )
 
-        raw_household_waste = st.slider(
-            "Household Waste (%)", min_value=0.0, max_value=100.0,
-            value=50.0,
-            step=0.1,
-        )
+        st.markdown('<div style="direction: ltr;">', unsafe_allow_html=True)
 
-        household_waste = round(100.0 - raw_household_waste, 1)
+household_waste = st.slider(
+    "Household Waste (%)", min_value=0.0, max_value=100.0,
+    value=50.0,
+    step=0.1,
+)
+
+st.markdown('</div>', unsafe_allow_html=True)
         
 
         st.markdown("#### Model Selection")

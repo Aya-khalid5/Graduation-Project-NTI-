@@ -336,12 +336,12 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Population (Million)"]), 2)),
                 step=1.0, format="%.2f",
             )
+            
             household_waste = st.slider(
                 "Household Waste (%)", min_value=0.0, max_value=100.0,
                 value=50.0,
                 step=0.1,
             )
-        st.markdown("#### Model Selection")
         model_choice = st.radio(
             "Choose a model",
             ["Linear Regression (predict Economic Loss)", "Logistic Regression (classify Loss Level)"],

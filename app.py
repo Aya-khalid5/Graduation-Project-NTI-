@@ -339,23 +339,12 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Population (Million)"]), 2)),
                 step=1.0, format="%.2f",
             )
-
-        with st.container():
-            st.markdown("""
-                <style>
-                div[data-testid="stSlider"], div[data-testid="stSlider"] * {
-                    direction: ltr !important;
-                    width: 100% !important;
-                    max-width: 100% !important;
-                }
-                </style>
-            """, unsafe_allow_html=True)
             
-            household_waste = st.slider(
-                "Household Waste (%)", min_value=0.0, max_value=100.0,
-                value=50.0,
-                step=0.1,
-            )
+        with st.container():
+                    household_waste = st.slider(
+                               "Household Waste (%)",
+                                  min_value=0.0,  max_value=100.0, value=50.0, step=0.1, format="%.1f%%"
+                    )
 
         st.markdown("#### Model Selection")
         model_choice = st.radio(

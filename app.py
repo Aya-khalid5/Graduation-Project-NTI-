@@ -337,13 +337,11 @@ elif page == "🔮 Prediction":
                 step=1.0, format="%.2f",
             )
 
-    household_waste = st.slider(
-        "Household Waste (%)", min_value=0.0, max_value=100.0,
-        value=50.0,
-        step=0.1,
-    )
-
-
+        household_waste = st.slider(
+            "Household Waste (%)", min_value=0.0, max_value=100.0,
+             value=50.0,
+             step=0.1,
+                   )
         model_choice = st.radio(
             "Choose a model",
             ["Linear Regression (predict Economic Loss)", "Logistic Regression (classify Loss Level)"],

@@ -337,18 +337,25 @@ elif page == "🔮 Prediction":
                 step=1.0, format="%.2f",
             )
 
-        st.markdown('<div style="direction: ltr;">', unsafe_allow_html=True)
+       with st.container():
+    st.markdown("""
+        <style>
+        div[data-testid="stSlider"] {
+            direction: ltr !important;
+        }
+        div[data-testid="stSlider"] * {
+            direction: ltr !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
+    household_waste = st.slider(
+        "Household Waste (%)", min_value=0.0, max_value=100.0,
+        value=50.0,
+        step=0.1,
+    )
 
-household_waste = st.slider(
-    "Household Waste (%)", min_value=0.0, max_value=100.0,
-    value=50.0,
-    step=0.1,
-)
-
-st.markdown('</div>', unsafe_allow_html=True)
-        
-
-        st.markdown("#### Model Selection")
+st.markdown("#### Model Selection")
         model_choice = st.radio(
             "Choose a model",
             ["Linear Regression (predict Economic Loss)", "Logistic Regression (classify Loss Level)"],

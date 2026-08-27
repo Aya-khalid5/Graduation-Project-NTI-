@@ -325,7 +325,7 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Total Waste (Tons)"]), 2)),
                 step=100.0, format="%.2f",
             )
-        with f3:
+            with f3:
             avg_waste_capita = st.number_input(
                 "Avg Waste per Capita (Kg)", min_value=0.0,
                 value=float(round(np.mean(meta["ranges"]["Avg Waste per Capita (Kg)"]), 2)),
@@ -336,7 +336,7 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Population (Million)"]), 2)),
                 step=1.0, format="%.2f",
             )
-         with st.container():
+            with st.container():
             st.markdown("""
                 <style>
                 div[data-testid="stSlider"], div[data-testid="stSlider"] * {

@@ -1,4 +1,4 @@
-# 🌍 Global Food Waste — Economic Impact Predictor
+#  Global Food Waste — Economic Impact Predictor
 
 A deployment-ready Streamlit web application for a Graduation Project that predicts
 the **economic loss** caused by food waste and **classifies** its severity, using the
@@ -10,7 +10,7 @@ exact models and preprocessing pipeline developed in `FinalProject.ipynb`.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 GraduationProject/
@@ -40,7 +40,7 @@ GraduationProject/
 
 ---
 
-## ⚠️ Important note on `encoder.pkl` / `scaler.pkl`
+##  Important note on `encoder.pkl` / `scaler.pkl`
 
 `FinalProject.ipynb` fits an `OneHotEncoder` and a `StandardScaler` on `X_train`, but
 only saves the two trained **models** with `joblib.dump` — it never persists the
@@ -57,7 +57,7 @@ already-trained models on the test set (see the metrics reported in the app's
 
 ---
 
-## 🧠 Modeling Summary (from the notebook)
+##  Modeling Summary (from the notebook)
 
 | Item | Detail |
 |---|---|
@@ -73,7 +73,7 @@ already-trained models on the test set (see the metrics reported in the app's
 
 ---
 
-## 🖥️ Application Pages
+##  Application Pages
 
 1. **Home** — project overview, problem statement, objective, ML approach.
 2. **Prediction** — enter feature values, choose a model, get a live prediction
@@ -86,21 +86,21 @@ already-trained models on the test set (see the metrics reported in the app's
 
 ---
 
-## ✅ Testing Performed
+##  Testing Performed
 
 Before delivery, the following were verified programmatically:
 
-- Loading of all four `.pkl` files (models, encoder, scaler) ✅
+- Loading of all four `.pkl` files (models, encoder, scaler) 
 - The reconstructed encoder/scaler + saved models reproduce coherent evaluation
-  metrics on the notebook's test split (R² ≈ 0.53, Accuracy ≈ 0.78) ✅
+  metrics on the notebook's test split (R² ≈ 0.53, Accuracy ≈ 0.78) 
 - End-to-end feature-vector construction for both models across **all 160**
-  Country × Food Category combinations — no errors ✅
+  Country × Food Category combinations — no errors 
 - Unseen/unknown categorical values are handled gracefully via
-  `handle_unknown="ignore"` (encoded as all-zero, no crash) ✅
-- Boundary and extreme numeric inputs (e.g. future years, max population) ✅
+  `handle_unknown="ignore"` (encoded as all-zero, no crash) 
+- Boundary and extreme numeric inputs (e.g. future years, max population) 
 - Input validation rejects non-positive waste/population values and out-of-range
-  percentages ✅
-- `app.py` parses with no syntax errors ✅
+  percentages 
+- `app.py` parses with no syntax errors 
 
 > Note: this sandbox has no internet access, so `streamlit run app.py` itself could
 > not be executed here. All underlying prediction/preprocessing logic used by the
@@ -109,7 +109,7 @@ Before delivery, the following were verified programmatically:
 
 ---
 
-## 🚀 Run Locally
+##  Run Locally
 
 ```bash
 # 1. Create and activate a virtual environment (recommended)
@@ -127,7 +127,7 @@ The app will open at `http://localhost:8501`.
 
 ---
 
-## 🐳 Run with Docker
+##  Run with Docker
 
 The project includes a `Dockerfile`, `.dockerignore`, and `docker-compose.yml`.
 
@@ -161,7 +161,7 @@ Open **http://localhost:8501**.
 
 ---
 
-## 🐙 GitHub Setup
+##  GitHub Setup
 
 ```bash
 cd GraduationProject
@@ -178,7 +178,7 @@ git push -u origin main
 
 ---
 
-## ☁️ Deploy to Streamlit Community Cloud
+##  Deploy to Streamlit Community Cloud
 
 1. Push this project to a public (or Streamlit-authorized private) GitHub repo, as above.
 2. Go to **https://share.streamlit.io** and sign in with GitHub.
@@ -193,7 +193,7 @@ git push -u origin main
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - **Streamlit** — web application framework
 - **scikit-learn** — trained models & preprocessing (loaded, not retrained)

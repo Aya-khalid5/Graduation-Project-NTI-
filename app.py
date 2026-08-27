@@ -40,15 +40,7 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 st.markdown(
     """
     <style>
-   
-div[data-testid="stSlider"],
-    div[data-testid="stSlider"] * {
-        direction: ltr !important;
-    }
-    
-    div[data-baseweb="slider"] div {
-        transform: none !important;
-    }
+  
     .main { background-color: #f7f9fb; }
     .block-container { padding-top: 2rem; }
 
@@ -345,11 +337,13 @@ elif page == "🔮 Prediction":
                 step=1.0, format="%.2f",
             )
 
-        household_waste = st.slider(
+        raw_household_waste = st.slider(
             "Household Waste (%)", min_value=0.0, max_value=100.0,
             value=50.0,
             step=0.1,
         )
+
+        household_waste = round(100.0 - raw_household_waste, 1)
         
 
         st.markdown("#### Model Selection")

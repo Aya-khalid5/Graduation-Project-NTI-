@@ -312,12 +312,14 @@ elif page == "🔮 Prediction":
     with st.form("prediction_form"):
         st.markdown("#### Input Features")
         f1, f2, f3 = st.columns(3)
+        
         with f1:
             country = st.selectbox("Country", COUNTRIES)
             year = st.number_input(
                 "Year", min_value=meta["year_min"], max_value=meta["year_max"] + 5,
                 value=meta["year_max"], step=1,
             )
+            
         with f2:
             food_category = st.selectbox("Food Category", FOOD_CATEGORIES)
             total_waste = st.number_input(
@@ -325,8 +327,9 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Total Waste (Tons)"]), 2)),
                 step=100.0, format="%.2f",
             )
-            with f3:
-                avg_waste_capita = st.number_input(
+            
+        with f3:
+            avg_waste_capita = st.number_input(
                 "Avg Waste per Capita (Kg)", min_value=0.0,
                 value=float(round(np.mean(meta["ranges"]["Avg Waste per Capita (Kg)"]), 2)),
                 step=1.0, format="%.2f",
@@ -336,12 +339,25 @@ elif page == "🔮 Prediction":
                 value=float(round(np.mean(meta["ranges"]["Population (Million)"]), 2)),
                 step=1.0, format="%.2f",
             )
+
+        with st.container():
+            st.markdown("""
+                <style>
+                div[data-testid="stSlider"], div[data-testid="stSlider"] * {
+                    direction: ltr !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                }
+                </style>
+            """, unsafe_allow_html=True)
             
             household_waste = st.slider(
                 "Household Waste (%)", min_value=0.0, max_value=100.0,
                 value=50.0,
                 step=0.1,
             )
+
+        st.markdown("#### Model Selection")
         model_choice = st.radio(
             "Choose a model",
             ["Linear Regression (predict Economic Loss)", "Logistic Regression (classify Loss Level)"],
@@ -415,8 +431,6 @@ elif page == "🔮 Prediction":
                 f"Reference: training-set median Economic Loss = "
                 f"${meta['median_loss']:,.2f} Million (used as the High/Low Loss threshold)."
             )
-
-
 # --------------------------------------------------------------------------
 # MODEL INFORMATION PAGE
 # --------------------------------------------------------------------------

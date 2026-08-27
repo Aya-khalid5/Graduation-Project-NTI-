@@ -326,7 +326,7 @@ elif page == "🔮 Prediction":
                 step=100.0, format="%.2f",
             )
             with f3:
-            avg_waste_capita = st.number_input(
+                avg_waste_capita = st.number_input(
                 "Avg Waste per Capita (Kg)", min_value=0.0,
                 value=float(round(np.mean(meta["ranges"]["Avg Waste per Capita (Kg)"]), 2)),
                 step=1.0, format="%.2f",

@@ -337,7 +337,7 @@ elif page == "🔮 Prediction":
             )
 
         household_waste = st.slider(
-            "Household Waste (%)", min_value=0.0, max_value=100.0,
+            "Household Waste (%)", min_value=100.0, max_value=0.0,
             value=50.0,
             step=0.1,
         )

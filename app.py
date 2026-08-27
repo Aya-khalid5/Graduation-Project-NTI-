@@ -40,9 +40,18 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 st.markdown(
     """
     <style>
-    div[data-baseweb="slider"] {
-        direction: ltr !important;
-    }
+   
+div[data-baseweb="slider"] {
+    direction: ltr !important;
+}
+
+div[data-baseweb="slider"] > div {
+    direction: ltr !important;
+}
+
+.stSlider {
+    direction: ltr !important;
+}
     .main { background-color: #f7f9fb; }
     .block-container { padding-top: 2rem; }
 

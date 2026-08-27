@@ -41,17 +41,14 @@ st.markdown(
     """
     <style>
    
-div[data-baseweb="slider"] {
-    direction: ltr !important;
-}
-
-div[data-baseweb="slider"] > div {
-    direction: ltr !important;
-}
-
-.stSlider {
-    direction: ltr !important;
-}
+div[data-testid="stSlider"],
+    div[data-testid="stSlider"] * {
+        direction: ltr !important;
+    }
+    
+    div[data-baseweb="slider"] div {
+        transform: none !important;
+    }
     .main { background-color: #f7f9fb; }
     .block-container { padding-top: 2rem; }
 

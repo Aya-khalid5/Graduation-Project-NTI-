@@ -171,7 +171,7 @@ def validate_inputs(year, total_waste, avg_waste_capita, population, household_w
 # --------------------------------------------------------------------------
 # SIDEBAR NAVIGATION
 # --------------------------------------------------------------------------
-st.sidebar.markdown("## 🌍 Navigation")
+st.sidebar.markdown("##  Navigation")
 page = st.sidebar.radio(
     "Go to",
     ["🏠 Home", "🔮 Prediction", "📊 Model Information", "📈 Visualizations"],
@@ -215,13 +215,13 @@ if page == "🏠 Home":
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.markdown('<div class="card"><h3>🌐 Countries</h3><h2>20</h2></div>', unsafe_allow_html=True)
+        st.markdown('<div class="card"><h3> Countries</h3><h2>20</h2></div>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<div class="card"><h3>🍽️ Food Categories</h3><h2>8</h2></div>', unsafe_allow_html=True)
+        st.markdown('<div class="card"><h3> Food Categories</h3><h2>8</h2></div>', unsafe_allow_html=True)
     with col3:
-        st.markdown(f'<div class="card"><h3>📅 Years Covered</h3><h2>{meta["year_min"]}–{meta["year_max"]}</h2></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="card"><h3> Years Covered</h3><h2>{meta["year_min"]}–{meta["year_max"]}</h2></div>', unsafe_allow_html=True)
     with col4:
-        st.markdown('<div class="card"><h3>🤖 ML Models</h3><h2>2</h2></div>', unsafe_allow_html=True)
+        st.markdown('<div class="card"><h3> ML Models</h3><h2>2</h2></div>', unsafe_allow_html=True)
 
     st.markdown("<br/>", unsafe_allow_html=True)
 
@@ -230,7 +230,7 @@ if page == "🏠 Home":
         st.markdown(
             """
             <div class="card">
-            <h3>📌 Problem Statement</h3>
+            <h3> Problem Statement</h3>
             <p>Food waste is a growing global crisis with significant economic
             consequences. Governments, retailers, and organizations need a way
             to <b>anticipate the economic loss</b> caused by food waste and to
@@ -243,7 +243,7 @@ if page == "🏠 Home":
         st.markdown(
             """
             <div class="card">
-            <h3>🎯 Project Objective</h3>
+            <h3> Project Objective</h3>
             <ul>
                 <li>Predict the <b>Economic Loss (Million $)</b> caused by food
                 waste using a <b>Linear Regression</b> model.</li>
@@ -261,7 +261,7 @@ if page == "🏠 Home":
         st.markdown(
             """
             <div class="card">
-            <h3>🧠 Machine Learning Approach</h3>
+            <h3> Machine Learning Approach</h3>
             <ol>
                 <li><b>Data Cleaning:</b> group-wise median imputation for
                 numeric columns (Country+Year, Country+Food Category,
@@ -284,7 +284,7 @@ if page == "🏠 Home":
         st.markdown(
             """
             <div class="card">
-            <h3>📥 Input Features</h3>
+            <h3> Input Features</h3>
             <p>Country · Year · Food Category · Total Waste (Tons) ·
             Avg Waste per Capita (Kg) · Population (Million) ·
             Household Waste (%)</p>
@@ -300,7 +300,7 @@ if page == "🏠 Home":
 # PREDICTION PAGE
 # --------------------------------------------------------------------------
 elif page == "🔮 Prediction":
-    st.markdown("## 🔮 Make a Prediction")
+    st.markdown("##  Make a Prediction")
     st.caption("All inputs are transformed using the exact fitted encoder and scaler from training — no refitting occurs here.")
 
     with st.form("prediction_form"):
@@ -333,9 +333,10 @@ elif page == "🔮 Prediction":
 
         household_waste = st.slider(
             "Household Waste (%)", min_value=0.0, max_value=100.0,
-            value=float(round(np.mean(meta["ranges"]["Household Waste (%)"]), 2)),
+            value=50.0,
             step=0.1,
         )
+        
 
         st.markdown("#### Model Selection")
         model_choice = st.radio(
@@ -344,7 +345,7 @@ elif page == "🔮 Prediction":
             horizontal=True,
         )
 
-        submitted = st.form_submit_button("🚀 Predict", use_container_width=True)
+        submitted = st.form_submit_button(" Predict", use_container_width=True)
 
     if submitted:
         errors = validate_inputs(year, total_waste, avg_waste_capita, population, household_waste)
@@ -417,9 +418,9 @@ elif page == "🔮 Prediction":
 # MODEL INFORMATION PAGE
 # --------------------------------------------------------------------------
 elif page == "📊 Model Information":
-    st.markdown("## 📊 Model Information & Evaluation Metrics")
+    st.markdown("##  Model Information & Evaluation Metrics")
 
-    tab1, tab2 = st.tabs(["📐 Linear Regression", "🧮 Logistic Regression"])
+    tab1, tab2 = st.tabs([" Linear Regression", " Logistic Regression"])
 
     with tab1:
         st.markdown("#### Predicts: Economic Loss (Million $)")
@@ -474,9 +475,9 @@ elif page == "📊 Model Information":
 # VISUALIZATIONS PAGE
 # --------------------------------------------------------------------------
 elif page == "📈 Visualizations":
-    st.markdown("## 📈 Visualizations & Business Insights")
+    st.markdown("##  Visualizations & Business Insights")
 
-    v1, v2 = st.tabs(["🤖 Model Performance", "🌍 Business Insights"])
+    v1, v2 = st.tabs([" Model Performance", " Business Insights"])
 
     with v1:
         st.markdown("#### Model Performance Comparison")

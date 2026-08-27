@@ -1,0 +1,7 @@
+services:
+  food-waste-app:
+    build: .
+    container_name: food-waste-predictor
+    ports:
+      - "8501:8501"
+    restart: unless-stopped

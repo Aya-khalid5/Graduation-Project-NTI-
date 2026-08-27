@@ -1,0 +1,34 @@
+feature,coefficient
+Year,-52.94283629762533
+Total Waste (Tons),14133.991788753967
+Avg Waste per Capita (Kg),-47.37698726186343
+Population (Million),19.444780599156907
+Household Waste (%),-72.93574897706809
+Country_Argentina,212.57985878664644
+Country_Australia,331.8738718546973
+Country_Brazil,-355.5214183926138
+Country_Canada,-23.05466922614827
+Country_China,500.4370235899227
+Country_France,-396.6068256182691
+Country_Germany,-234.5147716755986
+Country_India,84.17298699942428
+Country_Indonesia,-134.18494837947577
+Country_Italy,-51.24968367196585
+Country_Japan,-145.69130690647737
+Country_Mexico,83.67123787395411
+Country_Russia,-285.75957859743335
+Country_Saudi Arabia,315.47109138178274
+Country_South Africa,-120.07734870686379
+Country_South Korea,276.0540927495988
+Country_Spain,183.76702311449085
+Country_Turkey,-100.90799041364158
+Country_UK,-216.6283503357256
+Country_USA,76.16970557369474
+Food Category_Bakery Items,-52.43961011619827
+Food Category_Beverages,42.06314510727957
+Food Category_Dairy Products,-159.3794866130462
+Food Category_Frozen Food,233.70188903677328
+Food Category_Fruits & Vegetables,335.38176240735504
+Food Category_Grains & Cereals,-290.9439349683744
+Food Category_Meat & Seafood,-39.13900097626027
+Food Category_Prepared Food,-69.24476387752773

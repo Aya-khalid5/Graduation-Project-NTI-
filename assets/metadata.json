@@ -1,0 +1,92 @@
+{
+  "num_cols": [
+    "Year",
+    "Total Waste (Tons)",
+    "Avg Waste per Capita (Kg)",
+    "Population (Million)",
+    "Household Waste (%)"
+  ],
+  "cat_cols": [
+    "Country",
+    "Food Category"
+  ],
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Brazil",
+    "Canada",
+    "China",
+    "France",
+    "Germany",
+    "India",
+    "Indonesia",
+    "Italy",
+    "Japan",
+    "Mexico",
+    "Russia",
+    "Saudi Arabia",
+    "South Africa",
+    "South Korea",
+    "Spain",
+    "Turkey",
+    "UK",
+    "USA"
+  ],
+  "food_categories": [
+    "Bakery Items",
+    "Beverages",
+    "Dairy Products",
+    "Frozen Food",
+    "Fruits & Vegetables",
+    "Grains & Cereals",
+    "Meat & Seafood",
+    "Prepared Food"
+  ],
+  "median_loss": 24350.21,
+  "year_min": 2018,
+  "year_max": 2024,
+  "ranges": {
+    "Total Waste (Tons)": [
+      502.61,
+      49990.76
+    ],
+    "Avg Waste per Capita (Kg)": [
+      20.09,
+      199.92
+    ],
+    "Population (Million)": [
+      11.46,
+      1399.97
+    ],
+    "Household Waste (%)": [
+      30.02,
+      70.0
+    ]
+  },
+  "linear_metrics": {
+    "MAE": 6734.715098657865,
+    "MSE": 106144200.55282654,
+    "RMSE": 10302.630758831772,
+    "R2": 0.5331983305434327
+  },
+  "logistic_metrics": {
+    "Accuracy": 0.778,
+    "Precision": 0.8038379530916845,
+    "Recall": 0.7435897435897436,
+    "F1": 0.7725409836065574,
+    "confusion_matrix": [
+      [
+        401,
+        92
+      ],
+      [
+        130,
+        377
+      ]
+    ],
+    "labels": [
+      "Low Loss",
+      "High Loss"
+    ]
+  }
+}

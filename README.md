@@ -200,3 +200,9 @@ git push -u origin main
 - **Plotly** — interactive charts
 - **Pandas / NumPy** — data handling
 - **Joblib** — model/preprocessing object persistence
+- 
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/40bd3425-d63a-4df8-b677-ed1e46f6c627" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4b14256d-92ed-4430-8f43-3d387b9b3d00" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/b28d87b8-c8c5-4cb9-be8e-f7047294375d" />
+https://canva.link/4wb5g0si2z6wqtu
+

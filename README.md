@@ -204,6 +204,12 @@ git push -u origin main
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/40bd3425-d63a-4df8-b677-ed1e46f6c627" />
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4b14256d-92ed-4430-8f43-3d387b9b3d00" />
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/b28d87b8-c8c5-4cb9-be8e-f7047294375d" />
+
+Deployment : https://global-food-wastage-web.streamlit.app/
+
 Presention : https://canva.link/4wb5g0si2z6wqtu
+
 Docker Hub: https://hub.docker.com/layers/ayakhaled5/food-waste-app/latest/images/sha256%3A43573111205e40a236f215be909f35578f951a4c9a78ae8fb214517d24ee2b9c?uuid=2609A4C3-D5B4-46D9-8D45-EEACB81E7277
+
+
 
